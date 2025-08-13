@@ -1,0 +1,14 @@
+def strings_xor(s, t):
+    res = ""
+    for i in range(len(s)):
+        if s[i] == t[i]:       # Fix 1: Use '==' instead of '='
+            res += '0'         # Fix 2: Append instead of assign
+        else:
+            res += '1'         # Fix 3: Append instead of assign
+
+    return res
+
+s = input()
+t = input()
+print(strings_xor(s, t))
+
